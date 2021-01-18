@@ -25,7 +25,7 @@ function dmpout = initialiseDMP(datalength,options)
 %     For more information on DMP, refer to <a
 %     href="https://link.springer.com/chapter/10.1007/11008941_60">this article</a>.
 %     For more information on the tau calculation, refer to <a
-%     href="https://link.springer.com/chapter/10.1007/11008941_60">this article</a>.
+%     href="https://www.researchgate.net/publication/348575169_User_Intent_Estimation_during_robot_learning_using_Physical_Human_Robot_Interaction_Primitives">this article</a>.
 
 arguments
     datalength          int64
