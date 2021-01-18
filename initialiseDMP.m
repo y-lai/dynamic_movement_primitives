@@ -6,7 +6,7 @@ function dmpout = initialiseDMP(datalength,options)
 %     Example:
 %         dmpout = initialiseDMP(500)
 %
-%     DMP = initialiseDMP(...,options) specifices other parameters for ...
+%     DMP = initialiseDMP(...,options) specifies other parameters for ...
 %     the initialisation of DMP. Other optional parameters are:
 %     
 %     'phase_alpha' - alpha parameter for DMP. (default = 0.8)
@@ -20,7 +20,7 @@ function dmpout = initialiseDMP(datalength,options)
 %         % Example for data collected at 125 hz
 %         dmpout = initialiseDMP(... , 'datafreq' , 125)
 %         % Example for different number of RBF (50) for forcing function
-%         dmpout = initialiseDMP(... , 'numrbf' , 50);
+%         dmpout = initialiseDMP(... , 'numrbf' , 50)
 %
 %     For more information on DMP, refer to <a
 %     href="https://link.springer.com/chapter/10.1007/11008941_60">this article</a>.
@@ -28,12 +28,12 @@ function dmpout = initialiseDMP(datalength,options)
 %     href="https://link.springer.com/chapter/10.1007/11008941_60">this article</a>.
 
 arguments
-    datalength int64
-    options.tauval {mustBeNumeric,mustBeNonnegative} = []
-    options.phase_alpha (1,1) {mustBeNumeric,mustBeNonnegative} = 0.8
-    options.numrbf (1,1) {mustBeNumeric,mustBeNonnegative} = 30
-    options.width (1,1) {mustBeNumeric,mustBeNonnegative} = 0.55
-    options.datafreq (1,1) {mustBeNumeric,mustBeNonnegative} = 100
+    datalength          int64
+    options.tauval      {mustBeNumeric, mustBeNonNan, mustBeNonnegative} = []
+    options.phase_alpha {mustBeNumeric, mustBeNonNan, mustBeNonnegative} = 0.8
+    options.numrbf      {mustBeNumeric, mustBeNonNan, mustBeNonnegative} = 30
+    options.width       {mustBeNumeric, mustBeNonNan, mustBeNonnegative} = 0.55
+    options.datafreq    {mustBeNumeric, mustBeNonNan, mustBeNonnegative} = 100
 end
 % assign default values
 dmpout.datalength = datalength;
